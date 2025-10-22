@@ -1,0 +1,47 @@
+body.login-body {
+    background-image: url("assets/login-background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center centre;
+}
+.login-container {
+    padding: 40px;
+    margin-top: 200px;
+    text-align: center;
+}
+.login-container h2{
+    font-family: "Bahnschrift SemiBold";
+    color: #dda15e;
+}
+#login-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+input{
+    font-family: "Bahnschrift SemiBold";
+    padding: 8px;
+    border: 2px solid #283618;
+    border-radius: 6px;
+    font-size: 15px;
+    background-color: #fefae0;
+}
+button{
+    background-color: #fefae0;
+    font-family: "Bahnschrift SemiBold";
+    margin-left: 10px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 6px;
+    font-family: "Bahnschrift SemiBold";
+    color:#283618;
+    padding: 4px 10px;
+    border-bottom: 1px solid #283618;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+button:hover{
+    background-color: #faedcd;
+}
