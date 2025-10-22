@@ -1,0 +1,269 @@
+/* Base Styles */
+body {
+    font-family: "Bahnschrift SemiBold", sans-serif;
+    background-color: #0d1321;
+    color: #f0ebd8;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+}
+
+/* Sidebar */
+.container {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 200px;
+    padding: 20px;
+    background-color: #1d2d44;
+    color: #f0ebd8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebar h2 {
+    margin-top: 40px;
+    margin-bottom: 60px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: #f0ebd8;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.sidebar a:hover {
+    background-color: #0d1321;
+}
+
+/* Main Content Grid Layout */
+.main-content {
+    flex: 1;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+    grid-template-areas:
+        "top-bar top-bar"
+        "profile currently"
+        "shelf books"
+        "recommend recommend"
+        "communities communities";
+}
+
+/* Top Bar */
+.top-bar {
+    grid-area: top-bar;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.profile-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 45px;
+    right: 0;
+    background-color: #1d2d44;
+    border: 1px solid #3e5c76;
+    border-radius: 6px;
+    min-width: 120px;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    padding: 5px 0;
+}
+
+.dropdown-menu a,
+.dropdown-menu button {
+    color: #f0ebd8;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: "Bahnschrift SemiBold", sans-serif;
+}
+
+.dropdown-menu a:hover,
+.dropdown-menu button:hover {
+    background-color: #3e5c76;
+}
+
+.profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+
+/* Toggle Button States */
+.toggle-btn {
+    background-color: #3e5c76;
+    color: #f0ebd8;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.toggle-btn.active {
+    background-color: #3e5c76; /* Read mode */
+    color: #f0ebd8;
+}
+
+.toggle-btn.inactive {
+    background-color: #748cab; /* Write mode */
+    color: #0d1321;
+}
+
+
+.profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Card Layout Boxes */
+.profile-box,
+.currently-reading,
+.your-books,
+.your-shelf,
+.recommendations,
+.communities {
+    background-color: #1d2d44;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Grid Area Assignments */
+.profile-box {
+    grid-area: profile;
+}
+
+.currently-reading {
+    grid-area: currently;
+}
+
+.your-shelf {
+    grid-area: shelf;
+}
+
+.your-books {
+    grid-area: books;
+}
+
+.recommendations {
+    grid-area: recommend;
+}
+
+.communities {
+    grid-area: communities;
+}
+
+/* Profile Stats */
+.stats {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+/* Progress Bar */
+.progress-bar {
+    background-color: #3e5c76;
+    width: 100%;
+    height: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.progress {
+    background-color: #748cab;
+    height: 100%;
+    width: 0%;
+}
+
+.last-updated {
+    font-size: 0.9em;
+    color: #ccc;
+    margin-top: 10px;
+}
+
+/* Shelf Buttons */
+.shelf-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.shelf-buttons button {
+    background-color: #3e5c76;
+    color: #f0ebd8;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Recommendations List */
+.recommendations ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+
+/* Redirect Buttons */
+.redirect-btn {
+    background-color: #748cab;
+    color: #0d1321;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+/* Communities */
+.community-note {
+    margin-bottom: 10px;
+    font-size: 0.95em;
+    color: #f0ebd8;
+}
+
+/* Responsive Layout */
+@media (max-width: 900px) {
+    .main-content {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "top-bar"
+            "profile"
+            "currently"
+            "shelf"
+            "books"
+            "recommend"
+            "communities";
+    }
+}

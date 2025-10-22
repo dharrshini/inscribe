@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscribe - Home</title>
+    <link rel="stylesheet" href="inscribe.css">
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="container">
+        <div class="sidebar">
+            <h2>Inscribe</h2>
+            <a href="inscribe.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="search.html">Search</a>
+            <a href="profile.html">Profile</a>
+            <a href="settings.html">Settings</a>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+
+            <!-- Top Bar -->
+            <div class="top-bar">
+                <button id="toggleMode" class="toggle-btn active" data-mode="read">Read</button>
+                <div class="profile-wrapper">
+    <img src="assets/logo.jpg" alt="Profile" class="profile-pic" id="profilePic">
+
+    <div class="dropdown-menu" id="dropdownMenu">
+        <a href="profile.html">Profile</a>
+        <button id="logoutBtn">Logout</button>
+    </div>
+</div>
+            </div>
+
+            <!-- Profile Box -->
+            <div class="profile-box">
+                <h3>Your Profile</h3>
+                <div class="stats">
+                    <div><strong>Books:</strong> 42</div>
+                    <div><strong>Following:</strong> 108</div>
+                    <div><strong>Followers:</strong> 95</div>
+                    <div><strong>Communities:</strong> 6</div>
+                </div>
+            </div>
+
+            <!-- Currently Reading -->
+            <div class="currently-reading">
+                <h3>Currently Reading</h3>
+                <p><strong>Book:</strong> The Midnight Library</p>
+                <div class="progress-bar"><div class="progress" style="width: 60%;"></div></div>
+                <p class="last-updated">Last Updated: Oct 22, 2025 - 14:35</p>
+            </div>
+
+            <!-- Your Books 2025 -->
+            <div class="your-books">
+                <h3>Your Books – 2025</h3>
+                <!-- Placeholder for now -->
+                <p>You've read 12 books this year. Keep going!</p>
+            </div>
+
+            <!-- Your Shelf -->
+            <div class="your-shelf">
+                <h3>Your Shelf</h3>
+                <div class="shelf-buttons">
+                    <button>Read</button>
+                    <button>Reading</button>
+                    <button>Want to Read</button>
+                </div>
+            </div>
+
+            <!-- Recommendations -->
+            <div class="recommendations">
+                <h3>Recommendations</h3>
+                <ul>
+                    <li>Because you read</li>
+                    <li>In your radar</li>
+                    <li>Similar to</li>
+                    <li>Next in series</li>
+                    <li>What friend is reading</li>
+                    <li>Try something new</li>
+                </ul>
+                <button class="redirect-btn">Go to Recommendations</button>
+            </div>
+
+            <!-- Communities -->
+            <div class="communities">
+                <h3>Communities</h3>
+                <div class="community-note">📚 Sci-fi Explorers – 13 new posts</div>
+                <div class="community-note">📝 Writing Circle – Prompt of the Week: "Time Travel"</div>
+                <button class="redirect-btn">Explore Communities</button>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="inscribe.js"></script>
+</body>
+</html>
